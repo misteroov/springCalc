@@ -25,7 +25,7 @@ public class CalcController {
     public void addContact(
                              @ModelAttribute("contact") Contact contact) {
 
-            contactService.add(contact);
+             contactService.add(contact);
         System.out.println(contactService.showList());
 
 
