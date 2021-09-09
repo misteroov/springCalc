@@ -1,13 +1,27 @@
 package com.misteroov.springbootcalc.service;
 
 public class Dostavka {
-    private static  double dostavka;
+    private  double dostavka;
 
-    Dostavka(double dostavka) {
+    public Dostavka() {
+    }
+
+   public Dostavka(double dostavka) {
         this.dostavka = dostavka;
     }
 
-    public static double getDostavka() {
+    public  double getDostavka() {
         return dostavka;
+    }
+
+    public void setDostavka(double dostavka) {
+        this.dostavka = dostavka;
+    }
+
+    public  boolean isDostavka(){
+        if (dostavka==0.0){
+            return false;
+
+        }else return true;
     }
 }

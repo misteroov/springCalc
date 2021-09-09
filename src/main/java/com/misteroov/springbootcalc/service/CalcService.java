@@ -8,7 +8,7 @@ import java.util.List;
 
 public class CalcService {
 
-    Dostavka dostavka = new Dostavka(100.00);
+
 
 
     public double calculateSumma(List<Contact> contactList){
@@ -18,10 +18,10 @@ public class CalcService {
         return summapokupok;
     }
 
-    public List<Contact> calculateDelivery(List<Contact> contactList){
+    public List<Contact> calculateDelivery(List<Contact> contactList,Dostavka dostavka){
         List<Contact> newList = new ArrayList<>();
         contactList.forEach(contact -> newList.add(new Contact(contact.getName(),calculatePersonalDelivery(calculateSumma(Repo.showList()),
-                contact.getSummaPokupok(),Dostavka.getDostavka()) )));
+                contact.getSummaPokupok(),dostavka.getDostavka()) )));
         return newList;
     }
 
