@@ -14,14 +14,16 @@
     <h2>Сохраняем подруженьку</h2>
 
 
-    <form action="#" th:action="@{/index}" th:object="${contact}" method="POST">
-        <input type="text" th:field="*{name}" placeholder="Имя" class="form-control mb-4 col-4">
-
-        <input type="text" th:field="*{summaPokupok}" placeholder="Сумма покупок" class="form-control mb-4 col-4">
-
-
-
-        <button type="submit" class="btn btn-info col-2"> Добавить подруженьку</button>
+    <form class="row gy-2 gx-3 align-items-center" action="#" th:action="@{/index}" th:object="${contact}" method="POST">
+        <div class="col-auto">
+        <input type="text" th:field="*{name}" placeholder="Имя" class="form-control ">
+        </div>
+        <div class="col-auto">
+        <input type="text" th:field="*{summaPokupok}" placeholder="Сумма покупок" class="form-control ">
+        </div>
+        <div class="col-auto">
+        <button type="submit" class="btn btn-outline-primary "> Добавить подруженьку</button>
+        </div>
     </form>
 
     <hr>
