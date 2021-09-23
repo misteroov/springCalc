@@ -20,7 +20,7 @@
 
                 <!-- IF CUSTOMER IS ANONYMOUS -->
                 <div th:if="${delivery}">
-                    <div th:text=" 'Доставка: ' + ${deliveryprice}">ddd</div>
+                    <div th:text=" 'Доставка: ' + ${deliveryprice}"> </div>
                 </div>
                 <!-- ELSE -->
                 <div th:unless="${delivery}">
@@ -39,7 +39,7 @@
             </div>
         </div>
     </div>
-
+<br>
 
     <table border="1" class="table table-striped table-responsive-md">
         <thead>

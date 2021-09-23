@@ -3,6 +3,8 @@ package com.misteroov.springbootcalc.service;
 import com.misteroov.springbootcalc.model.Contact;
 import com.misteroov.springbootcalc.repository.Repo;
 
+import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -28,7 +30,8 @@ public class CalcService {
     public double calculatePersonalDelivery(double obshajaSumma,double personalSumma, double dostavka ){
 
         double personalDelivery = (personalSumma/obshajaSumma)*dostavka;
-        return personalDelivery;
+        BigDecimal bg = BigDecimal.valueOf(personalDelivery).setScale(2, RoundingMode.HALF_UP);
+        return bg.doubleValue();
 
     }
 }
