@@ -1,5 +1,8 @@
 package com.misteroov.springbootcalc.service;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class Dostavka {
 
     private double dostavka;

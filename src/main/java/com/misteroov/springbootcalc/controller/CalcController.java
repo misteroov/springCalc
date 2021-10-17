@@ -4,6 +4,7 @@ import com.misteroov.springbootcalc.model.Contact;
 import com.misteroov.springbootcalc.repository.Repo;
 import com.misteroov.springbootcalc.service.CalcService;
 import com.misteroov.springbootcalc.service.Dostavka;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -15,8 +16,8 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 public class CalcController {
 
-
-    Dostavka dostavka = new Dostavka();
+    @Autowired
+   private Dostavka dostavka;
 
     @GetMapping("/")
     public String showList(Model model) {
